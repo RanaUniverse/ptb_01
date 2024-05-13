@@ -39,7 +39,6 @@ import random
 async def get_user_name_design(user, context: ContextTypes.DEFAULT_TYPE):
     '''Pass the user = update.message.from_user like this and it will get the name and return after makeup'''
     full_name = user.full_name
-    
     designs = [
         f"1 Your Name is:\n\n<b>{full_name}</b>\n\n",
         f"2 Your Name is:\n\n<strong>{full_name}</strong>\n\n",
@@ -51,10 +50,10 @@ async def get_user_name_design(user, context: ContextTypes.DEFAULT_TYPE):
         f"8 Your Name is:\n\n<strike>{full_name}</strike>\n\n",
         f"9 Your Name is:\n\n<del>{full_name}</del>\n\n",
         f"10 Your Name is:\n\n<span class='tg-spoiler'>{full_name}</span>\n\n",
-        f"11 Your Name is: \n\n<tg-spoiler>{full_name}</tg-spoiler>"
+        f"11 Your Name is: \n\n<tg-spoiler>{full_name}</tg-spoiler>\n\n",
         f"12 Your Name is:\n\n<b>{full_name} <i>italic {full_name}</i></b>\n\n",
         f"13 Your Name is:\n\n<a href='http://t.me/@{user.username}/'>{full_name}</a>\n\n",
-        f"14 Your Name is:\n\n<a href='tg://user?id={user.id}'>{full_name}</a>\n\n",
+        f"14 Your Name is:\n\n<a href='tg://user?id=1895194333'>{full_name}</a>\n\n",
         f"15 Your Name is:\n\n<tg-emoji emoji-id='5368324170671202286'>{full_name}</tg-emoji>\n\n",
         f"16 Your Name is:\n\n<code>{full_name}</code>\n\n",
         f"17 Your Name is:\n\n<pre>{full_name}</pre>\n\n",
@@ -63,11 +62,7 @@ async def get_user_name_design(user, context: ContextTypes.DEFAULT_TYPE):
     ]
     
     design_str = random.choice(designs)
-    
     return f"{design_str}"
-    # return f"{designs}"
-    # design_str = '\n'.join(designs)
-    # return design_str
 
 
 
