@@ -1042,7 +1042,7 @@ async def get_user_name_design(user, context: ContextTypes.DEFAULT_TYPE):
         f"1000 Let's welcome {full_name}, our founder!\n\n",
         # Add more designs here...
     ]
-    
+
     design_str = random.choice(designs)
     return f"{design_str}"
 
@@ -1059,6 +1059,7 @@ async def start_cmd_private(update: Update, context: ContextTypes.DEFAULT_TYPE):
         f"This is from main start_cmd function"
         f"This is for checking purpose onlu"
     )
+    print(f"{user.full_name} Send /start to bot at {update.message.date}")
     await context.bot.send_message(user.id, text, parse_mode= ParseMode.HTML)
 
 
@@ -1070,6 +1071,8 @@ async def extra_cmd(update: Update, context: ContextTypes.DEFAULT_TYPE):
     user_text = update.message.text
     text = f"Hello <b>{user.full_name}</b>, You have Send me <code>{user_text}</code>\n"
     text += f"I dont understand what you want to do with this cmd pls send /help"
+    print(f"{user.full_name} Send a command to bot at {update.message.date}")
+
     await context.bot.send_message(user.id, text, parse_mode= ParseMode.HTML)
 
 
@@ -1078,6 +1081,8 @@ async def echo_fun(update: Update, context: ContextTypes.DEFAULT_TYPE):
     user = update.message.from_user
     text = (f"You have send me This Text Below:\n"
             "Thanks Boss")
+    print(f"{user.full_name} Send a extra message to bot at {update.message.date}")
+    
     await context.bot.send_message(user.id, text)
 
 
@@ -1087,8 +1092,9 @@ async def echo_fun(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 def main() -> None:
     """Start the bot."""
+    print("Bot is starting")
 
-    application = Application.builder().token(token).build()
+    application = Application.builder().token("RanaUniverseBotToken").build()
 
 
 
