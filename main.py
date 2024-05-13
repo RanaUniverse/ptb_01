@@ -62,9 +62,11 @@ async def get_user_name_design(user, context: ContextTypes.DEFAULT_TYPE):
         f"19 Your Name is:\n\n<blockquote>{full_name}</blockquote>\n\n"
     ]
     
-    design_str = random.choice(designs)
-    return f"{design_str}"
-    return f"{designs}"
+    # design_str = random.choice(designs)
+    # return f"{design_str}"
+    # return f"{designs}"
+    design_str = '\n'.join(designs)
+    return design_str
 
 
 
@@ -104,7 +106,7 @@ async def echo_fun(update: Update, context: ContextTypes.DEFAULT_TYPE):
 def main() -> None:
     """Start the bot."""
 
-    application = Application.builder().token("Bot Token").build()
+    application = Application.builder().token("6780033449:AAFKWBuWlPcBHLm303owSEvDriPZjCxs9ZU").build()
 
 
 
