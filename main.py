@@ -106,7 +106,7 @@ async def echo_fun(update: Update, context: ContextTypes.DEFAULT_TYPE):
 def main() -> None:
     """Start the bot."""
 
-    application = Application.builder().token("6780033449:AAFKWBuWlPcBHLm303owSEvDriPZjCxs9ZU").build()
+    application = Application.builder().token(token).build()
 
 
 
