@@ -62,11 +62,12 @@ async def get_user_name_design(user, context: ContextTypes.DEFAULT_TYPE):
         f"19 Your Name is:\n\n<blockquote>{full_name}</blockquote>\n\n"
     ]
     
-    # design_str = random.choice(designs)
-    # return f"{design_str}"
+    design_str = random.choice(designs)
+    
+    return f"{design_str}"
     # return f"{designs}"
-    design_str = '\n'.join(designs)
-    return design_str
+    # design_str = '\n'.join(designs)
+    # return design_str
 
 
 
